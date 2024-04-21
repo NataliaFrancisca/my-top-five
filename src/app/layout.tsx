@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className='bg-white'>
+    <html lang="en" className='bg-c_white'>
       <body className={worksans.className}>{children}</body>
     </html>
   );
