@@ -10,8 +10,8 @@ const config: Config = {
     extend: {
       colors: {
         primary: '#60FF39',
-        black: '#202020',
-        white: '#DCD7D2'
+        c_black: '#202020',
+        c_white: '#DCD7D2'
       }
     }
   },
