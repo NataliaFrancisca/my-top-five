@@ -29,7 +29,7 @@ export default function Home() {
           alt="image that have a duplicated person listening music using headphones"
         />
 
-        <Button message="TRY WITH SPOTIFY" style="w-11/12" buttonEvent={() => onLoginWithSpotify()}/>
+        <Button message="TRY WITH SPOTIFY" style="w-11/12 self-center" buttonEvent={() => onLoginWithSpotify()}/>
       </section>
     </main>
   );
