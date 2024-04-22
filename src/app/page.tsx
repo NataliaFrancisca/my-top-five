@@ -1,8 +1,14 @@
 'use client';
 import Image from "next/image";
 import Button from "./components/Button/Button";
+import { signIn } from "next-auth/react";
 
 export default function Home() {
+
+  const onLoginWithSpotify = () => {
+    signIn('spotify', { callbackUrl: '/view'})
+  }
+
   return (
     <main className="h-dvh flex justify-center items-center gap-2.5 p-6" >
       
@@ -23,7 +29,7 @@ export default function Home() {
           alt="image that have a duplicated person listening music using headphones"
         />
 
-        <Button message="TRY WITH SPOTIFY" style="w-11/12" buttonEvent={() => console.log("BUTTON WAS CLICKED")}/>
+        <Button message="TRY WITH SPOTIFY" style="w-11/12" buttonEvent={() => onLoginWithSpotify()}/>
       </section>
     </main>
   );
