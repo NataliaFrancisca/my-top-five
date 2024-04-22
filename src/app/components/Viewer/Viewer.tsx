@@ -5,7 +5,7 @@ const Viewer = () => {
     return(
         <section className="bg-c_black flex flex-col items-center py-8 px-2 justify-center">
             
-            <Image src='title-h.svg' width={319} height={10} alt="title writting MY TOP FIVE" className="max-w-screen-sm" />
+            <Image src='title-h.svg' width={319} height={10} alt="title writting MY TOP FIVE" className="sm:max-w-full" />
 
             <Songs />
 
