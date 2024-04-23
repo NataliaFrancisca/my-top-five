@@ -15,37 +15,39 @@ const handler = NextAuth({
     ],
 
     jwt: {
-        maxAge: 60 * 60
+        maxAge: 60 * 60,
     },
   
     session: {
         strategy: 'jwt',
     },
-  
+
     callbacks: {
         async session({ session, token }) {
-            session.accessToken = token.accessToken;
-            session.refreshToken = token.refreshToken;
             return session;
         },
 
         async jwt({token, account}){
             if (account) {
-            token.accessToken = account.access_token
-            token.refreshToken = account.refresh_token
-            return token;
+                token.accessToken = account.access_token
+                token.refreshToken = account.refresh_token
+                return token;
             }
 
             if(token.accessTokenExpires && Date.now() < token.accessTokenExpires){
-            console.log("ACHO QUE O TOKEN AINDA NÃO ESTÁ EXPIRADO");
-            return token;
+                console.log("ACHO QUE O TOKEN AINDA NÃO ESTÁ EXPIRADO");
+                return token;
             }
 
             const newToken = await refreshAccessToken(token);
             console.log('UM NOVO TOKEN FOI GERADO :)');
             return newToken;
         }
-    }
+    },
+
+    secret: process.env.NEXTAUTH_SECRET
 })
+
+
 
 export { handler as GET, handler as POST }
