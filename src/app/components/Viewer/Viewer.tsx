@@ -2,6 +2,7 @@ import Image from "next/image";
 import Songs from "../Songs/Songs";
 import { fetchUserToken } from "@/service/token";
 import { getTopTrack } from "@/service/top-track";
+import Empty from "../Empty/Empty";
 
 export default async function Viewer(){
 
@@ -9,6 +10,10 @@ export default async function Viewer(){
 
     const fetchAPI = getTopTrack(usertoken);
     const userdata = await fetchAPI();
+
+    if(userdata.items.length == 0){
+        return <Empty />;
+    }
 
     return(
         <section className="bg-c_black flex flex-col items-center py-8 px-2 justify-center">
