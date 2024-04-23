@@ -5,6 +5,7 @@ export async function GET(req: NextRequest) {
     const token = await getToken({
         req,
         secret: process.env.NEXTAUTH_SECRET ?? '',
+        secureCookie: process.env.NEXTAUTH_URL?.startsWith('https://') ?? process.env.VERCEL_ENV === 'previe'
     })
 
     if(!token){
