@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import { Work_Sans } from 'next/font/google';
-import './globals.css';
 
+import './globals.css';
+import Provider from './components/Provider/Provider';
 const worksans = Work_Sans({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -15,8 +16,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className='bg-c_white'>
-      <body className={worksans.className}>{children}</body>
-    </html>
+      <html lang="en" className='bg-c_white'>
+         <Provider>
+           <body className={worksans.className}>{children}</body>
+         </Provider>
+      </html>
   );
 }
