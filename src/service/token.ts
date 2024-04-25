@@ -1,8 +1,10 @@
 import { headers } from "next/headers";
 
 export async function fetchUserToken(){
+    const DYNAMIC_URL = process.env.NEXTAUTH_URL;
+
     try{
-        const response = await fetch("http://localhost:3000/api/token", {
+        const response = await fetch(`${DYNAMIC_URL}/api/token`, {
             method: "GET",
             headers: headers(),
         });
