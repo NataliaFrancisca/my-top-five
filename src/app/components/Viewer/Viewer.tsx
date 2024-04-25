@@ -10,8 +10,7 @@ export default async function Viewer(){
 
     const usertoken = await fetchUserToken();
 
-    const fetchAPI = getTopTrack(usertoken);
-    const userdata = await fetchAPI();
+    const userdata = await getTopTrack(usertoken);
     
     if(userdata.items.length === 0){
         return <Empty />
