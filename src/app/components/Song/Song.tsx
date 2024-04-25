@@ -9,8 +9,8 @@ const Song = (props: {song: IFetchSong}) => {
         <article className="flex w-full gap-2">
             <Image src={album.images[0].url} width={92} height={86} alt="album cover" />
 
-            <div className="flex flex-col justify-center text-c_white">
-                <a className="font-bold text-xl no-underline" href={external_urls.spotify} target="_blank">{name}</a>
+            <div className="flex flex-col justify-center text-c_white overflow-hidden whitespace-nowrap">
+                <a className="font-bold text-xl no-underline inline-block truncate" href={external_urls.spotify} target="_blank">{name}</a>
 
                 { artists.length < 2 ? artists.map((artist, key) => (
                         <p key={key} className="font-medium text-base">{artist.name}</p>
