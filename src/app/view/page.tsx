@@ -1,6 +1,8 @@
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 import Viewer from "../components/Viewer/Viewer";
+import { fetchUserToken } from "@/service/token";
+import { getTopTrack } from "@/service/top-track";
 
 export default async function Page(){
     const session = await getServerSession();
@@ -9,5 +11,8 @@ export default async function Page(){
         redirect('/');
     }
 
-   return <Viewer />
+    const usertoken = await fetchUserToken();
+    const userdata = await getTopTrack(usertoken);
+
+   return <Viewer userData={userdata.items} />
 }
