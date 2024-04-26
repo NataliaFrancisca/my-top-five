@@ -20,7 +20,7 @@ export default function Home() {
         alt="image that have a duplicated phrase my top five written in green with a black background"
       />
 
-      <section className="flex flex-col h-fit">
+      <section className="flex flex-col h-full justify-between">
         <Image
           src="illustration.svg"
           width={258}
