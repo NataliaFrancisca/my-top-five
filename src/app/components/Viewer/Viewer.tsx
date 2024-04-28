@@ -26,7 +26,7 @@ export default function Viewer(props: {userData: Array<IFetchSong>}){
 
             <section className="bg-c_black flex flex-col items-center py-8 px-2 justify-center h-auto" ref={ref}>
 
-                <h1 className="text-5xl font-black text-primary text-center md:text-5xl">MY TOP FIVE</h1>
+                <h1 className="text-6xl font-black text-primary text-center md:text-5xl">MY TOP 5</h1>
 
                 <Songs userData={props.userData} />
 
