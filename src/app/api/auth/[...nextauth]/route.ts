@@ -10,7 +10,8 @@ const handler = NextAuth({
             clientId: process.env.CLIENT_ID as string,
             clientSecret: process.env.CLIENT_SECRET as string,
             authorization: `https://accounts.spotify.com/authorize?scope=${scope}`,
-            token: {url: 'https://accounts.spotify.com/api/token', params: {grant_type: 'authorization_code'}}
+            token: {url: 'https://accounts.spotify.com/api/token', params: {grant_type: 'authorization_code'}},
+            checks: ['none']
         })
     ],
 
