@@ -9,8 +9,7 @@ export async function getTopTrack(token: string){
             }
         });
 
-        const data = await response.json();
-        return data;
+        return await response.json();
     }catch(error){
         return error;
     }

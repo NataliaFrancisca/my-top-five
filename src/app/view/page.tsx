@@ -12,7 +12,7 @@ export default async function Page(){
     }
 
     const usertoken = await fetchUserToken();
-    const userdata = await getTopTrack(usertoken);
+    const userdata = await getTopTrack(usertoken.accessToken);
 
    return <Viewer userData={userdata.items} />
 }
