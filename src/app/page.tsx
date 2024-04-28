@@ -10,27 +10,25 @@ export default function Home() {
   }
 
   return (
-    <main className="h-dvh flex justify-center items-center gap-2.5 p-6" >
-      
-      <Image 
-        src="title.svg" 
-        width={84} 
-        height={600}
-        className="h-full flex"
-        alt="image that have a duplicated phrase my top five written in green with a black background"
-      />
+    <main className="h-dvh flex flex-col gap-2.5 py-10 bg-primary justify-between px-11" >
 
-      <section className="flex flex-col h-full justify-between">
-        <Image
-          src="illustration.svg"
-          width={258}
-          height={481}
-          className="h-full flex"
-          alt="image that have a duplicated person listening music using headphones"
+      <section className="h-full w-full flex flex-col md:w-4/12 md:mx-auto justify-between">
+        <h1 className="text-6xl font-black text-c_black text-start leading-[4.2rem]">
+          MY TOP <br />
+          <span className="text-[#D5FFCA] underline">FIVE</span> 
+        </h1>
+
+        <Image 
+          src='initial-page-illustration.svg'
+          width={390}
+          height={390}
+          className="md:mx-auto md:w-8/12"
+          alt="an animated boy listening music using headphones"
         />
 
-        <Button message="TRY WITH SPOTIFY" style="w-11/12 self-center" buttonEvent={() => onLoginWithSpotify()}/>
+        <Button message="TRY WITH SPOTIFY" style="bg-c_black text-c_white text-xl" buttonEvent={() => onLoginWithSpotify()}/>
       </section>
+       
     </main>
   );
 }
