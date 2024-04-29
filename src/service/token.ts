@@ -6,11 +6,12 @@ export async function fetchUserToken(){
     try{
         const response = await fetch(`${DYNAMIC_URL}/api/token`, {
             method: "GET",
-            headers: new Headers(headers())
+            headers: new Headers(headers()),
         });
 
         return await response.json();
     }catch(error){
-        console.error(error);
+        console.error('error', error);
+        return error;
     }
 }
