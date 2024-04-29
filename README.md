@@ -20,4 +20,4 @@
 [Figma File](https://www.figma.com/file/CunoE7jRbASCHbfYQU2wVe/MY-TOP-FIVE?type=design&node-id=0%3A1&mode=design&t=x2cTm2bSUT9t2Inb-1)
 
 ## **Preview:**
-![App Screenshot](https://raw.githubusercontent.com/NataliaFrancisca/github-readme-images/main/%5Bproject%5D%20-%20my%20top%20five%20-%20image.png)
+![App Screenshot](https://raw.githubusercontent.com/NataliaFrancisca/github-readme-images/main/%5Bproject%5D%20-%20my%20top%20five.png)
