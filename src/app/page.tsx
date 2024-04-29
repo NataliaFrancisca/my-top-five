@@ -15,7 +15,7 @@ export default function Home() {
       <section className="h-full w-full flex flex-col md:w-4/12 md:mx-auto justify-between">
         <h1 className="text-6xl font-black text-c_black text-start leading-[4.2rem]">
           MY TOP <br />
-          <span className="text-[#D5FFCA] underline">FIVE</span> 
+          <span className="text-c_white underline">FIVE</span> 
         </h1>
 
         <Image 
