@@ -13,8 +13,8 @@ const Song = (props: {song: IFetchSong}) => {
                 <a className="font-bold text-xl no-underline inline-block truncate" href={external_urls.spotify} target="_blank">{name}</a>
 
                 { artists.length < 2 ? artists.map((artist, key) => (
-                        <p key={key} className="font-medium text-lg">{artist.name}</p>
-                    )) : <p className="font-medium text-lg">{artists[0].name} & {artists.length - 1} more</p>
+                        <p key={key} className="font-medium text-lg inline-block truncate">{artist.name}</p>
+                    )) : <p className="font-medium text-lg inline-block truncate">{artists[0].name} & {artists.length - 1} more</p>
                 }
             </div>
         </article>
