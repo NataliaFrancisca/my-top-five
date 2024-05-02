@@ -2,7 +2,7 @@ import { refreshAccessToken } from "@/utils/refreshToken";
 import NextAuth from "next-auth/next";
 import Spotify from "next-auth/providers/spotify";
 
-const scope = 'user-read-private user-read-email user-top-read';
+const scope = 'user-read-email user-top-read';
 
 const handler = NextAuth({
     providers: [
@@ -36,12 +36,10 @@ const handler = NextAuth({
             }
 
             if(token.accessTokenExpires && Date.now() < token.accessTokenExpires){
-                console.log("ACHO QUE O TOKEN AINDA NÃO ESTÁ EXPIRADO");
                 return token;
             }
 
             const newToken = await refreshAccessToken(token);
-            console.log('UM NOVO TOKEN FOI GERADO :)');
             return newToken;
         }
     },
