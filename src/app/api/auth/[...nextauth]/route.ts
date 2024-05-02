@@ -2,7 +2,7 @@ import { refreshAccessToken } from "@/utils/refreshToken";
 import NextAuth from "next-auth/next";
 import Spotify from "next-auth/providers/spotify";
 
-const scope = 'user-read-email user-top-read';
+const scope = 'user-top-read';
 
 const handler = NextAuth({
     providers: [
