@@ -9,9 +9,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: '#60FF39',
+        primary: '#eb7eff',
         c_black: '#202020',
         c_white: '#F5F9F3'
+      },
+      backgroundImage: {
+        home_pattern: "url('/background-pattern.svg')",
+      },
+      boxShadow: {
+        button: '4px 4px #f0f4f9'
       }
     }
   },

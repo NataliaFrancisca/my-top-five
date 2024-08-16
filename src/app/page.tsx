@@ -1,34 +1,28 @@
-'use client';
-import Image from "next/image";
-import Button from "./components/Button/Button";
-import { signIn } from "next-auth/react";
+import { getServerSession } from 'next-auth';
+import { redirect } from 'next/navigation';
+import ButtonLogin from './components/Button/ButtonLogin';
 
-export default function Home() {
+export default async function Home() {
+  const session = await getServerSession();
 
-  const onLoginWithSpotify = () => {
-    signIn('spotify', { callbackUrl: '/view'})
+  if (session) {
+    redirect('/view');
   }
 
   return (
-    <main className="h-dvh flex flex-col gap-2.5 py-10 bg-primary justify-between px-11" >
-
-      <section className="h-full w-full flex flex-col md:w-4/12 md:mx-auto justify-between">
-        <h1 className="text-6xl font-black text-c_black text-start leading-[4.2rem]">
+    <main className="h-dvh flex justify-center items-center bg-[#f0f4f9] bg-home_pattern bg-center bg-repeat">
+      <section className="flex flex-col justify-around rounded bg-primary px-6 py-16 min-h-3/6 w-10/12 gap-8 md:w-6/12 md:px-16">
+        <h1 className="text-6xl text-start text-c_black font-black leading-[4.2rem]">
           MY TOP <br />
-          <span className="text-c_white underline">FIVE</span> 
+          <span className="underline">FIVE</span>
         </h1>
 
-        <Image 
-          src='illustration.svg'
-          width={390}
-          height={390}
-          className="md:mx-auto md:w-8/12"
-          alt="an animated boy listening music using headphones"
-        />
+        <p className="text-2xl text-c_black text-start font-normal">
+          Discover your top 5 currently most listened-to songs
+        </p>
 
-        <Button message="TRY WITH SPOTIFY" style="bg-c_black text-c_white text-xl" buttonEvent={() => onLoginWithSpotify()}/>
+        <ButtonLogin />
       </section>
-       
     </main>
   );
 }

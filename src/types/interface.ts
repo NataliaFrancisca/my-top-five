@@ -30,3 +30,16 @@ export interface IAlbumImage{
     url: string
 }
 
+export interface IButton{
+    message: string,
+    style: string;
+    event: () => void
+}
+
+export interface IUserDataResponse {
+    error?: {
+      status: number;
+      message: string;
+    };
+    items: IFetchSong[];
+}
