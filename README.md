@@ -4,9 +4,6 @@
 
 ⭐ This project was built to practice my knowledge in Next.JS and how to use the Spotify API.
 
-🚨 _**At the moment, I am requesting the Spotify API extension. So now, only registered users can access the functionalities.**_
-
-
 ## **Stack**:
 - Next.js
 - NextAuth.js
@@ -24,4 +21,4 @@
 
 
 ## **Preview:**
-![App Screenshot](https://raw.githubusercontent.com/NataliaFrancisca/github-readme-images/main/%5Bproject%5D%20-%20my%20top%20five.png)
+![App Screenshot](https://raw.githubusercontent.com/NataliaFrancisca/github-readme-images/main/%5Bproject%5D%20-%20my%20top%20five%20-%20v2.png)
