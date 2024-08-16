@@ -8,7 +8,7 @@ const Error = (error: { type: ErrorType }) => {
   const router = useRouter();
 
   return (
-    <main className="flex flex-col py-10 px-6 md:mx-auto md:w-6/12 lg:w-4/12 h-dvh">
+    <main className="flex flex-col py-10 px-6 md:mx-auto md:w-6/12 lg:w-4/12 min-h-dvh">
       <section className="bg-c_black flex flex-col items-center py-8 px-10 justify-center h-full gap-10">
         <h1 className="text-6xl font-black text-white text-center md:text-5xl">
           {error.type === ErrorType.empty ? 'SORRY' : 'ERROR'}
