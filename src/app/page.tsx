@@ -10,7 +10,7 @@ export default async function Home() {
   }
 
   return (
-    <main className="h-dvh flex justify-center items-center bg-[#f0f4f9] bg-home_pattern bg-center bg-repeat">
+    <main className="h-dvh flex justify-center items-center bg-c_white bg-home_pattern bg-center bg-repeat">
       <section className="flex flex-col justify-around rounded bg-primary px-6 py-16 min-h-3/6 w-10/12 gap-8 md:w-6/12 md:px-16">
         <h1 className="text-6xl text-start text-c_black font-black leading-[4.2rem]">
           MY TOP <br />

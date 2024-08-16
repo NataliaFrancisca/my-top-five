@@ -11,7 +11,7 @@ const config: Config = {
       colors: {
         primary: '#eb7eff',
         c_black: '#202020',
-        c_white: '#F5F9F3'
+        c_white: '#F2FFEF'
       },
       backgroundImage: {
         home_pattern: "url('/background-pattern.svg')",
