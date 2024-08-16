@@ -35,3 +35,11 @@ export interface IButton{
     style: string;
     event: () => void
 }
+
+export interface IUserDataResponse {
+    error?: {
+      status: number;
+      message: string;
+    };
+    items: IFetchSong[];
+}
