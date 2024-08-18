@@ -10,7 +10,7 @@ const ButtonLogin = () => {
   return (
     <Button
       message="TRY WITH SPOTIFY"
-      style="mt-auto bg-c_black text-c_white text-sm font-semibold"
+      style="mt-auto bg-c_black text-white text-sm font-semibold"
       event={() => onLoginWithSpotify()}
     />
   );

@@ -24,7 +24,7 @@ export default function Viewer(props: { userData: Array<IFetchSong> }) {
 
         <Songs userData={props.userData} />
 
-        <span className="text-sm text-center text-c_white">
+        <span className="text-sm text-center text-white">
           discover your top five <br />{' '}
           <b className="text-base">my-top-five.vercel.app</b>
         </span>

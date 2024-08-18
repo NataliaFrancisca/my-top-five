@@ -24,15 +24,15 @@ const Error = (error: { type: ErrorType }) => {
 
         {error.type === ErrorType.empty ? (
           <article className="flex flex-col gap-1">
-            <p className="text-center font-semibold text-2xl text-c_white">
+            <p className="text-center font-semibold text-2xl text-white">
               Your top five from last month is empty :/
             </p>
-            <span className="italic text-center text-base font-medium text-c_white">
+            <span className="italic text-center text-base font-medium text-white">
               try listening some music today
             </span>
           </article>
         ) : (
-          <p className="text-center font-semibold text-2xl text-c_white">
+          <p className="text-center font-semibold text-2xl text-white">
             Oops! Couldn`t fetch the data right now. Mind giving it another shot
             later?
           </p>
@@ -41,7 +41,7 @@ const Error = (error: { type: ErrorType }) => {
         {error.type === ErrorType.error && (
           <Button
             message="Try login again"
-            style="w-11/12 self-center bg-c_white hover:text-black"
+            style="w-11/12 self-center bg-white hover:text-black"
             event={() => router.push('/')}
           />
         )}
