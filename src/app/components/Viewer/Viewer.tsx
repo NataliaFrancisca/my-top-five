@@ -13,7 +13,7 @@ export default function Viewer(props: { userData: Array<IFetchSong> }) {
   return (
     <main className="flex flex-col py-10 px-6 h-auto md:mx-auto md:w-6/12 lg:w-4/12">
       <section
-        className="flex flex-col items-center justify-center py-8 px-6 h-auto bg-c_black"
+        className="flex flex-col items-center justify-center py-8 px-6 h-auto bg-c_black rounded"
         ref={refSectionToImage}
       >
         <p className="font-light text-white self-end text-md pb-6">{date}</p>
