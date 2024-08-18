@@ -21,4 +21,4 @@
 
 
 ## **Preview:**
-![App Screenshot](https://raw.githubusercontent.com/NataliaFrancisca/github-readme-images/main/%5Bproject%5D%20-%20my%20top%20five%20-%20v2.png)
+![App Screenshot](https://raw.githubusercontent.com/NataliaFrancisca/github-readme-images/main/%5Bproject%5D%20-%20my%20top%20five%20-%20v2.1.png)
